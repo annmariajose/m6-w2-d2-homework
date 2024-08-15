@@ -1,5 +1,6 @@
 import React from "react";
 import { connect } from 'react-redux';
+import "bootstrap/dist/css/bootstrap.min.css";
 
 class Counter extends React.Component {
     state = { count: 0 }
@@ -20,11 +21,11 @@ class Counter extends React.Component {
         return (
             <div>
                 <h2>Counter</h2>
-                <div>
-                    <span>{this.props.count}</span>
-                    <button onClick={this.decrement}>-</button>
-                    <button onClick={this.increment}>+</button>
-                    <button onClick={this.reset}>reset</button>
+                <div className="p-3 bg-info w-25">
+                    <span className="text-white p-2 border">{this.props.count}</span>
+                    <button onClick={this.decrement} className="m-2">-</button>
+                    <button onClick={this.increment} className="m-2">+</button>
+                    <button onClick={this.reset} className="m-2">reset</button>
                 </div>
             </div>
         )
